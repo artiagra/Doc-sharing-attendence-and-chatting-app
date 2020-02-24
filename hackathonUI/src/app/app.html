@@ -1,0 +1,59 @@
+<ion-menu [content]="content" width="100px" back >
+  <!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content>
+    <div class="top-div">
+      <ion-icon style="font-size: 70px; color:white; margin-top:20px;" ios="ios-contact" md="md-contact"></ion-icon>
+      <br>
+      <label style="color:white;margin-top:20px;">Welcome {{firstname}}</label>
+      <br>
+      <label style="color:white;">{{email}}</label>
+    </div>
+
+    <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(pages)">
+        {{pages.title}}
+      </button> -->
+    <button menuClose ion-item (click)="openPage(pages[0])">
+      <ion-icon md="md-contact" item-start></ion-icon>
+      {{pages[0].title}}
+    </button>
+    <button menuClose ion-item (click)="openPage(pages[1])">
+      <ion-icon md="md-calendar" item-start></ion-icon>
+      {{pages[1].title}}
+    </button>
+    <button menuClose ion-item (click)="openPage(pages[2])">
+      <ion-icon md="md-square-outline" item-start></ion-icon>
+      {{pages[2].title}}
+    </button>
+    <button menuClose ion-item (click)="openPage(pages[3])">
+      <ion-icon md="md-folder" item-start></ion-icon>
+      {{pages[3].title}}
+    </button>
+    <hr>
+    <label style="margin-left:15px;">Communicate</label>
+    <button menuClose ion-item>
+      <ion-icon md="md-notifications" item-start></ion-icon>
+      Notification
+    </button>
+    <button menuClose ion-item>
+      <ion-icon md="md-share" item-start></ion-icon>
+      Share
+    </button>
+    <button menuClose ion-item>
+      <ion-icon md="md-send" item-start></ion-icon>
+      Help
+    </button>
+    <button menuClose ion-item (click)="logout()">
+      <ion-icon md="md-power" item-start></ion-icon>
+      Logout
+    </button>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,38 @@
+page-directory {
+
+    .bg{
+        background:linear-gradient(to top,#e8eaec 0%, #eaecee 100% );
+    }
+    .header{
+      font-size: 20px;
+      font-weight: bold;
+      text-align: initial;
+      
+    }
+    .content{
+        text-align: end;
+
+    }
+    .img{
+      max-width: 70px;
+    }
+    .leftcol{
+        max-width: 70px;
+       // max-height: 100px;
+        
+    }
+    .mainrow{
+        max-height: 11vh;
+    }
+    .contentrow{
+        max-height: 5vh;
+    }
+    .headerow{
+        max-height: 10vh;
+        
+    }//.cardbg{
+      //  background-color: #A7C8FF;
+    //}
+    
+}
+

@@ -1,0 +1,71 @@
+<!--
+  Generated template for the Contact1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Department of {{userinfo.department}} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div id="empnam">{{userinfo.firstname}}&nbsp;{{userinfo.lastname}} </div>
+  <div class="panel panel-default" id="pamain">
+    <div class="panel-heading" id="pa">
+      <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>&nbsp;&nbsp;&nbsp;General Information
+    </div>
+
+    <div id="geninformation">
+
+      <div id="jobtitle">
+        Designation:
+      </div>
+      <div id="in2">
+        {{userinfo.designation}}
+      </div>
+      <div id="jobtitle">
+        Department:
+      </div>
+      <div id="in2">
+        {{userinfo.department}}
+      </div>
+
+    </div>
+    <div class="panel-heading" id="pa">
+      <ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon>&nbsp;&nbsp;&nbsp;Contact Information
+    </div>
+    <div id="geninformations">
+
+      <div id="jobtitle">
+        <ion-icon ios="ios-call" md="md-call"></ion-icon>
+      </div>
+      <div id="in2">
+        {{userinfo.contactNo}}
+      </div>
+      <div id="jobtitle">
+        <ion-icon name="call"></ion-icon>
+      </div>
+      <div id="in2">
+        022788989988
+      </div>
+      <div id="jobtitle">
+        <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+      </div>
+      <div id="in2">
+        {{userinfo.email}}
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+</ion-content>

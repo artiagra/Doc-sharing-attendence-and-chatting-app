@@ -1,0 +1,63 @@
+<ion-header>
+
+
+
+  </ion-header>
+  
+  
+  <ion-content class = "bg" center text-center scroll="false">
+  
+   
+         <div class="splash-bg"></div>
+         <div class="splash-info">
+           <div class="splash-logo"></div>
+           <div class="splash-intro">
+             {{ 'Welcome to Officers Directory and Calender' }}
+           </div>
+         </div>
+       
+         <div class="up">
+     Login To Continue
+   </div>
+   <ion-row padding-right>
+  
+     <ion-item class="item item-trns text-center">
+       <!-- <input class="inputBox" type="text"> -->
+       <ion-label>User-Id</ion-label>
+       <ion-input [(ngModel)]="model.id" type="text" value="" minlength="8" maxlength="8" required ng-pattern="/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/"></ion-input>
+     </ion-item>
+  
+     <ion-item class="item item-trns text-center">
+       <!-- <input class="inputBox" type="password" -->
+       <ion-label>Password</ion-label>
+       <ion-input [(ngModel)]="model.pass" type="password" minlength="8" maxlength="8" required></ion-input>
+     </ion-item>
+  
+   </ion-row>
+   <div style="display:block;">
+     <!-- <ion-label style="float:right !important; cursor:pointer; color: #488aff;">Forgot Password</ion-label>
+     <br>
+     <br>
+     <ion-label style="float:right !important; cursor:pointer; color: #488aff;" (click)="register()">Register</ion-label> -->
+  
+  
+   </div>
+   <div padding>
+     <button ion-button block (click)="login(model)">LogIn</button>
+   </div>
+  
+   <div style="margin-bottom: 10px;">
+     <a (click)="forget()" style="cursor: pointer;">Forgot Password?</a>
+   </div>
+   <div>
+     <div>
+       <a>New User ? </a>
+       <a (click)="register()" style="cursor: pointer; margin-top:10px;">
+         <b>Sign Up Here</b>
+       </a>
+     </div>
+   </div>
+  
+   
+  
+  </ion-content>

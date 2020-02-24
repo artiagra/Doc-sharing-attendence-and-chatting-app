@@ -1,0 +1,71 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>register</ion-title>
+    </ion-navbar>
+   
+   </ion-header>
+   
+   
+   <ion-content padding>
+   
+    <ion-item padding-right>
+      <ion-label>User ID</ion-label>
+      <ion-input [(ngModel)]="id" type="text" value="" minlength="8" maxlength="8" required ng-pattern="/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/"></ion-input>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Aadhar ID</ion-label>
+      <ion-input [(ngModel)]="uid" type="text" value="" minlength="12" maxlength="12" required ng-pattern="/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/"></ion-input>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>First Name</ion-label>
+      <ion-input [(ngModel)]="firstname" type="text" value="" required></ion-input>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Last Name</ion-label>
+      <ion-input [(ngModel)]="lastname" type="text" value="" required></ion-input>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Designation</ion-label>
+      <ion-input [(ngModel)]="designation" type="text" value="" required></ion-input>
+    </ion-item>
+    <!--<ion-item>
+      <ion-label>UserRights<ion-label>
+      <ion-input  type="text" value="" ></ion-input>
+    </ion-item>-->
+   
+   
+    <ion-item padding-right>
+      <!-- <ion-label>Department</ion-label>
+      <ion-input [(ngModel)]="department" type="text" value=""></ion-input> -->
+      <ion-select [(ngModel)]="department" (ionChange)="selectState($event)" interface="action-sheet">
+        <ion-option *ngFor="let item of departments" value="{{item.name}}">{{item.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email" value="" required></ion-input>
+    </ion-item>
+    <ion-item padding-right>
+      <ion-label>Contact</ion-label>
+      <ion-input type="tel" maxlength="10" clearInput [(ngModel)]="contactNo" value="" required></ion-input>
+    </ion-item>
+   
+   
+    <ion-item padding-right>
+      <ion-label>Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" minlength="8" maxlength="8" required></ion-input>
+    </ion-item>
+    <ion-item padding-right>
+      <!-- <input class="inputBox" type="password" -->
+      <ion-label>Confirm Password</ion-label>
+      <ion-input [(ngModel)]="cpassword" type="password" minlength="8" maxlength="8" required></ion-input>
+    </ion-item>
+    <!-- <ion-item padding-right>
+      <ion-label style="display: none;">User</ion-label>
+      <ion-input [(ngModel)]="admin_rights" type="text" value="no" style="display: none;"></ion-input>
+    </ion-item> -->
+    <div padding>
+      <button ion-button block (click)="register()">Sign Up</button>
+    </div>
+   </ion-content>

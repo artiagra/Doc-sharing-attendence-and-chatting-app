@@ -1,0 +1,111 @@
+<!--
+  Generated template for the ForgetPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Forgot Passsword</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid>
+
+    <ion-row *ngIf="begin">
+      <ion-col col-2>
+        <ion-icon name="person" class="iconS" color="customicon"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <ion-item>
+          <ion-input placeholder="UserId" [(ngModel)]="id" name="id" type="text" minlength="9" maxlength="9" required></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="end">
+      <ion-col col-2>
+        <ion-icon name="unlock" class="iconS" color="customicon"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <ion-item>
+          <ion-input placeholder="Password" [(ngModel)]="pass" name="password" type="password" required maxlength="6"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="end">
+      <ion-col col-2>
+        <ion-icon name="unlock" class="iconS" color="customicon"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <ion-item>
+          <ion-input placeholder="Confirm Password" [(ngModel)]="cpass" name="cpassword" type="password" required maxlength="6"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row *ngIf="begin">
+      <ion-col col-2>
+        <ion-icon name="call" class="iconS" color="customicon"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <ion-item>
+          <ion-input placeholder="Enter Contact Number" [(ngModel)]="contact" name="contact" required type="text" minlength="10" maxlength="10"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="mid">
+      <ion-col col-2>
+        <ion-icon name="key" class="iconS" color="customicon"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <ion-item>
+          <ion-input placeholder="Enter OTP" name="otp" [(ngModel)]="otp" required type="text" minlength="4" maxlength="4"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+
+
+  <ion-grid>
+    <ion-row *ngIf="begin">
+      <ion-col center text-center>
+        <button class="register" ion-button round full blockcolor="success" (click)="validateUser()">Validate</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="mid">
+      <ion-col center text-center>
+        <button class="register" ion-button round full blockcolor="success" (click)="validateOtp()">Validate OTP</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="end">
+      <ion-col center text-center>
+        <button class="register" ion-button round full blockcolor="success" (click)="updatepassword()">Change Password</button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col center text-center>
+        <a style="cursor: pointer;" (click)="cancel()">
+          <b>User Login</b>
+        </a>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+</ion-content>

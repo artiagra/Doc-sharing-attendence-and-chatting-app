@@ -1,0 +1,58 @@
+<!--
+  Generated template for the DirectoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Directory</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--<ion-content padding class="bg">
+
+  
+  <ion-item class="list" *ngFor="let item of employeeData; let i = index" [attr.data-index]="i" (click)="getEmployee(item)">
+    <ion-thumbnail item-start>
+      <ion-icon name="contact"></ion-icon>
+    </ion-thumbnail>
+    <h2>{{ item.firstname }} {{item.lastname }}</h2>
+    <button ion-button clear item-end>View</button>
+  </ion-item>
+
+</ion-content>-->
+
+
+
+
+
+<ion-content class="bg">
+  <ion-card (click)=" contact1(item)" *ngFor="let item of employeeData">
+    <ion-row class="mainrow">
+      <ion-col class="leftcol">
+        <ion-thumbnail item-start>
+          <img src="../assets/imgs/user.png" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col>
+        <ion-row class="headerow">
+          <ion-card-header class="header">
+            {{item.firstname}} &nbsp;{{item.lastname}}
+            <br> <h2>
+              {{item.department}}
+            </h2>
+          </ion-card-header>
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <!--made by pankaj on 24th march 2018-->
+
+</ion-content>

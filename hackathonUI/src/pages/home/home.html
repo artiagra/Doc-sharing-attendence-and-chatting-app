@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Meetings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="overflow-y: true;" class="bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div>
+    <ion-segment [(ngModel)]="meet">
+      <ion-segment-button value="Today" class="bg">
+        Today
+      </ion-segment-button>
+      <ion-segment-button value="Past" class="bg">
+        Past
+      </ion-segment-button>
+      <ion-segment-button value="Up Comming" class="bg">
+        Future
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <button ion-item (click)="addMinutes()" class="bg" *ngIf="uerRole === 'admin'">
+    <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+    <ion-card>
+      <ion-card-header>
+        This metting is over please
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Add card content here! -->
+        Please enter the minutes
+        <br>
+        <!-- <ion-label item-start>{{item.id}}
+            <span style="margin-left:10px;"></span> {{item.agenda}}</ion-label>
+          <div class="item-note" item-end>
+            {{item.bookingDate}}
+          </div> -->
+      </ion-card-content>
+    </ion-card>
+
+  </button>
+
+  <div>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </div>
+
+  <div [ngSwitch]="meet">
+    <ion-list *ngSwitchCase="'Today'" class="bg">
+      <button ion-item *ngFor="let item of today" (click)="itemTapped($event, item)" class="bg">
+        <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+        <ion-card>
+          <ion-card-header>
+            {{item.meetingtitle}}
+          </ion-card-header>
+
+          <ion-card-content>
+            <!-- Add card content here! -->
+            {{item.agenda}} Date and Time{{item.meetingDate}}
+            <br> {{item.venue}}
+            <!-- <ion-label item-start>{{item.id}}
+                <span style="margin-left:10px;"></span> {{item.agenda}}</ion-label>
+              <div class="item-note" item-end>
+                {{item.bookingDate}}
+              </div> -->
+          </ion-card-content>
+        </ion-card>
+
+      </button>
+    </ion-list>
+
+
+
+    <ion-list *ngSwitchCase="'Up Comming'" class="bg">
+      <ion-card>
+        <button ion-item *ngFor="let item of future" (click)="itemTapped($event, item)" class="bg">
+          <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+
+          <ion-card-header>
+            {{item.mettingtitle}}
+          </ion-card-header>
+
+          <ion-card-content>
+            <!-- Add card content here! -->
+            {{item.id}} {{item.agenda}} {{item.bookingDate}}
+            <!-- <ion-label item-start>{{item.id}}
+                <span style="margin-left:10px;"></span> {{item.agenda}}</ion-label>
+              <div class="item-note" item-end>
+                {{item.bookingDate}}
+              </div> -->
+          </ion-card-content>
+
+        </button>
+      </ion-card>
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'Past'">
+      <button ion-item *ngFor="let item of past" (click)="itemTapped($event, item)" class="bg">
+        <!-- <ion-icon [name]="item.icon" item-start></ion-icon> -->
+        <ion-card>
+          <ion-card-header>
+            {{item.meetingtitle}}
+          </ion-card-header>
+
+          <ion-card-content>
+            <!-- Add card content here! -->
+            {{item.id}} {{item.agenda}} {{item.bookingDate}}
+            <!-- <ion-label item-start>{{item.id}}
+                <span style="margin-left:10px;"></span> {{item.agenda}}</ion-label>
+              <div class="item-note" item-end>
+                {{item.bookingDate}}
+              </div> -->
+          </ion-card-content>
+        </ion-card>
+      </button>
+    </ion-list>
+  </div>
+
+  <!-- *ngIf="uerRole === 'admin'" -->
+  <ion-fab bottom right *ngIf="uerRole === 'admin'">
+    <button ion-fab color="primary" style="font-size:30px;" (click)="newMeeting()">+</button>
+  </ion-fab>
+</ion-content>

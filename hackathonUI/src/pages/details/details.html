@@ -1,0 +1,150 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Meeting Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg">
+  <div text-center class="bg">
+    <hr>
+    <ion-label>
+
+      <b> Meeting Title:</b>
+      <br>
+    </ion-label>
+
+    <hr>
+  </div>
+  <div text-center>
+    {{selectedItem.meetingtitle}}
+
+  </div>
+
+  <div text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Date and Time:</b>
+    </ion-label>
+    <hr>
+  </div>
+
+  <div text-center>
+    {{selectedItem.meetingDate}}
+  </div>
+
+
+  <div text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Venue:</b>
+    </ion-label>
+    <hr>
+  </div>
+
+  <div text-center>
+
+    {{selectedItem.venue}}
+  </div>
+
+  <div text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Agenda:</b>
+      <br>
+    </ion-label>
+    <hr>
+
+  </div>
+
+  <div text-center>
+    <li>
+
+      {{selectedItem.agenda}}
+    </li>
+    <li>
+      jjj
+    </li>
+    <li>
+      kk
+    </li>
+  </div>
+
+
+  <div text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Description:</b>
+      <br>
+    </ion-label>
+    <hr>
+  </div>
+  <div *ngIf="selectedItem" padding text-center>
+    <li>
+      {{selectedItem.description}}
+    </li>
+  </div>
+
+  <div *ngIf="selectedItem.updates" text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Updates:</b>
+      <br>
+    </ion-label>
+    <hr>
+  </div>
+  <div *ngIf="selectedItem.updates" padding text-center>
+    <li>
+      {{selectedItem.updates}}
+    </li>
+  </div>
+
+  <div *ngIf="selectedItem.action" text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Actions:</b>
+      <br>
+    </ion-label>
+    <hr>
+  </div>
+  <div *ngIf="selectedItem.action" padding text-center>
+    <li>
+      {{selectedItem.action}}
+    </li>
+  </div>
+
+  <div *ngIf="selectedItem.decision" text-center class="bg">
+    <hr>
+    <ion-label>
+      <b> Decision:</b>
+      <br>
+    </ion-label>
+    <hr>
+  </div>
+  <div *ngIf="selectedItem.decision" padding text-center>
+    <li>
+      {{selectedItem.decision}}
+    </li>
+  </div>
+
+  <div padding *ngIf="checked">
+    <button ion-button block (click)="scan()">Check In</button>
+  </div>
+
+  <div padding>
+    <button ion-button block (click)="joinConference()">Join Conferece</button>
+  </div>
+
+
+  <ion-fab bottom right *ngIf="userRole === 'admin'">
+    <button ion-fab color="primary" style="font-size:30px;">/</button>
+  </ion-fab>
+</ion-content>

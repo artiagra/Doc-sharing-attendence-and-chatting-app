@@ -1,0 +1,35 @@
+about-list {
+    
+   
+    .head{
+        //margin-left: 33.33%;
+        
+        text-align: center;
+    }
+    .ion-md-contact:before{
+        margin-left: 27%;
+    }
+    .bg{
+        background:linear-gradient(to top,#e8eaec 0%, #eaecee 100% );
+    }
+    #imgwrap {
+        min-width:200px;
+        min-height:150px;
+        
+        text-align: center!important;
+    img {
+        border:0;
+        max-width:200px;
+        border-radius:80%;
+        
+        } 
+    }
+    .list{
+
+               border-color:rgba(0,0,0,0);
+        background-color: rgba(0,0,0,0);
+        color: #e8eaec;
+        
+    }
+    
+}

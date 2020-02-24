@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Live Conference</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-list>
+      <!-- <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+            {{ item }}
+          </button> -->
+      <ion-label *ngFor="let item of items">{{ item }}</ion-label>
+    </ion-list>
+  
+  
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <!-- <ion-title>Footer</ion-title> -->
+      <ion-input placeholder="Text Input" style="background: white;" [(ngModel)]="chatText"></ion-input>
+      <button ion-button icon-only (click)="startListening()">
+        <ion-icon name="mic"></ion-icon>
+      </button>
+      <button ion-button (click)="addChat(chatText)">Add</button>
+    </ion-toolbar>
+  </ion-footer>

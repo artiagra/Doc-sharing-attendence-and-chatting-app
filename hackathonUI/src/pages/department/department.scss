@@ -1,0 +1,73 @@
+
+    page-department {
+
+        .item-md.item-block .item-inner{
+            border-bottom: 1px solid grey !important;
+        }
+        .bg{
+            background:linear-gradient(to top,#e8eaec 0%, #eaecee 100% );
+            
+        }
+        // .head{
+        //     //margin-left: 33.33%;
+        // }
+        #imgwrap {
+            min-width:200px;
+            min-height:150px;
+            
+            text-align: center!important;
+        }
+        #pa{
+            margin:0;
+            padding: 10px;
+            font-size: 4vh;
+           // background:white;
+            border:none;
+            border-bottom: solid 2px #156CFF;
+            border-top: solid 2px #156CFF;
+            
+            
+        }
+        #pamain{
+            margin:0;
+            padding: 0;
+        }
+        #geninformation{
+            border-bottom: solid 2px #156CFF;
+             height: 20vh;
+        }
+        #geninformations{
+            border-bottom: solid 2px #156CFF;
+             height: 30vh;
+        }
+        #jobtitle{
+             font-size: 2vh;
+             float: left;
+             width: 30%;
+             text-align: center;
+             padding-top:3vh;
+             font-weight: bold;
+            
+            
+            
+        }
+        #in2{
+            //padding-left: 5vh;
+           // width: 70%;
+            font-size: 2vh;
+            text-align: center;
+            height: 10vh;
+            padding-top:3vh;
+            border-bottom: solid 1px #156CFF;
+        }
+        #empnam{
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 6vh;
+            
+     
+        }
+     }
+
+

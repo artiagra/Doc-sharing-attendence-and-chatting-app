@@ -1,0 +1,66 @@
+page-login {
+    .splash-bg {
+        position: relative;
+        background: url('../assets/imgs/17.jpg') no-repeat transparent ;
+        background-size: cover;
+        height: 25%;
+        z-index: 1;
+        background-repeat: repeat-x;
+       //animation: animatedBackground 40s linear infinite;
+      }
+    
+       @keyframes animatedBackground {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+      }
+    
+      .splash-info {
+        position: relative;
+        z-index: 2;
+        margin-top: -64px;
+        text-align: center;
+      }
+      .splash-logo {
+        margin: auto;
+        border-radius: 50%;
+        background: url('../assets/imgs/15.jpg') no-repeat transparent;
+        background-size: 100%;
+        width: 160px;
+        height: 160px;
+      }
+      .splash-intro {
+        font-size: 25px;
+        font-weight: bold;
+        max-width: 95%;
+        margin: auto;
+      }
+      
+   .scroll-content{
+       overflow: hidden;
+   }
+
+   .item-md.item-block .item-inner{
+        border-bottom: 1px solid grey !important;
+        width: 90%;
+    }
+    .up{
+        font-size: 20px;
+        font-weight: 500;
+        color: #2268d3;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .bg{
+        background:linear-gradient(to top,#e8eaec 0%, #eaecee 100% );
+    }
+    .item.item-trns{
+        border-color:rgba(0,0,0,0);
+        background-color: rgba(0,0,0,0);
+        color: black;
+        text-align: center;
+    }
+    #con{
+        text-align: center;
+    }
+ 
+}

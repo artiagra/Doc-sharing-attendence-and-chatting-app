@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class = "bg">
+  
+
+    <ion-card-header>
+      <div id="imgwrap">
+
+<img src='../assets/imgs/user.png'style="display:block; margin-left:auto; margin-right:auto"/>
+
+ </div>
+      
+    </ion-card-header>
+    
+
+    <ion-card-content>
+      <h2 class="head" style="color:#186EC9;">{{firstname }} {{lastname}}</h2>
+    </ion-card-content>
+
+  
+
+  
+    <ion-list class="hh">
+      <ion-item class="list">
+        <label style="color:#186EC9;">User ID :</label>
+        <label style="color:#186EC9;">{{userid}}</label>
+      </ion-item>
+      <ion-item class="list">
+        <label style="color:#186EC9;">Contact No :</label>
+        <label style="color:#186EC9;">{{contactNo}}</label>
+      </ion-item>
+      <ion-item class="list">
+        <label style="color:#186EC9;">Email ID :</label>
+        <label style="color:#186EC9;">{{email}}</label>
+      </ion-item>
+      <ion-item class="list">
+        <label style="color:#186EC9;">Department :</label>
+        <label style="color:#186EC9;">{{department}}</label>
+      </ion-item>
+      <ion-item class="list">
+        <label style="color:#186EC9;">Designation :</label>
+        <label style="color:#186EC9;">{{designation}}</label>
+      </ion-item>
+    </ion-list>
+    <ion-fab bottom right  >
+        <button ion-fab mini  (click)="addd()"><ion-icon name="create"></ion-icon></button>
+        </ion-fab>
+
+  
+</ion-content>
